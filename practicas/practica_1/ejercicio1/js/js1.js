@@ -23,12 +23,13 @@ function inicio(){
         fontFamily='sans'
         padding = '15px'
         margin = '20px'
-        // opacity='0,5'
+        opacity='0,5'
     }
 
+    /*Apartado F)
     setTimeout(() => {
-        document.body.style.backgroundColor='grey'
-    }, 5000);
+        document.body.style.visibility = 'hidden'
+    }, 5000);*/
 
     setInterval(() => {
         if(document.body.style.visibility === 'visible'){
