@@ -1,0 +1,53 @@
+#c1 {
+    border:1px solid black;
+    border-radius: 20px;
+    display:flex;
+    justify-content: center;
+    padding:1.5em;
+    background-color: rgb(46, 51, 61);
+    font-size: 30px;
+    color: aliceblue;
+}
+
+#btn1 {
+    border:1px solid black;
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 1em;
+    width: 100px;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(3, 38, 66);
+    color: aliceblue;
+}
+#numero{
+    text-align: center;
+    color: rgb(32, 10, 10);
+    font-size: 50px;
+}
+#c3 {
+    border:1px solid black;
+    border-radius: 20px;
+    margin: auto;
+    width: 100px;
+    height: 150px;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: auto;
+    background-color: rgb(3, 38, 66);
+    color: aliceblue;
+}
+
+body{
+    background-color: rgb(121, 118, 114);
+}
+
+#intentos{
+    text-align: center;
+    color: rgb(32, 10, 10);
+    font-size: 50px;
+}
+
