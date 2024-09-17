@@ -40,13 +40,12 @@ function accion4() {
     let numUser=0
     let numJuego=generarNum(100)
     let contador =0
-    while (numUser!=numJuego) {
-        if (contador===0) {
-            numUser=prompt("Intenta adivinar el número")
-        }else if (numUser>numJuego) {
-            numUser=prompt("El numero que has indicado es mayor al buscado")
-        }else{
-            numUser=prompt("El numero que has indicado es menor al buscado")
+    while (numUser!==numJuego) {
+        numUser = parseInt(prompt("Adivina el numero:"))
+        if (numUser>numJuego) {
+            alert("El numero es menor")
+        }else if (numUser<numJuego) {
+            alert("El numero es mayor")
         }
         contador++
     }
