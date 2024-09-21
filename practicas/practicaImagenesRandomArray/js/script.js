@@ -18,10 +18,10 @@ boton.onclick=()=>{
             }else{
                 sexo='men'
             }
-            imagenes[index].setAttribute("src","https://randomuser.me/api/portraits/" + sexo + "/" + num + ".jpg");
-            cuerpo.append(imagenes[index]);
+            imagenes[index].setAttribute("src","https://randomuser.me/api/portraits/" + sexo + "/" + num + ".jpg")
+            cuerpo.append(imagenes[index])
             }else{
-                delete(imagenes[index])
+                imagenes[index].setAttribute("src","")
             }
             
         }

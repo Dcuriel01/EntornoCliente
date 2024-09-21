@@ -1,0 +1,49 @@
+body{
+    background-color: cornsilk;
+}
+#divTexto{
+    margin: auto;
+    height: 150px;
+}
+#titulo{
+    text-align: center;
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+#puntuacion{
+    font-size: 40px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#boton{
+    width: 190px;
+    height: 70px;
+    border: 5px solid black; 
+    border-radius: 15px;
+    margin-left: 150px;
+    background-color: darkslateblue;
+}
+#tiempo{
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+#colores{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 1px;
+}
+#padre {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+#colorText{
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+}
