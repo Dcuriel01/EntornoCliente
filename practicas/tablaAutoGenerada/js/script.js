@@ -7,12 +7,15 @@ boton.addEventListener('click',()=>{
     let numeroFilas = prompt('Indique el número de filas') 
     let numeroColumnas = prompt('Indique el número de columnas')
     const tabla = document.createElement('table')
+    tabla.style.border='1px solid black'
     div.appendChild(tabla)
     for (let i = 0; i < numeroFilas; i++) {
         const tr = document.createElement('tr')
         for (let j = 0; j < numeroColumnas; j++) {
             let x = generarNum(10)
             const td = document.createElement('td')
+            td.style.border='1px solid black'
+            td.style.textAlign='Center'
             td.textContent=x
             tr.appendChild(td)
         }
