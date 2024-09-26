@@ -3,7 +3,7 @@ const div = document.createElement('div')
 const boton = document.querySelector('#boton')
 cuerpo.appendChild(div)
 boton.addEventListener('click',()=>{
-    limpiar()
+    limpiar(div)
     let numeroFilas = prompt('Indique el número de filas') 
     let numeroColumnas = prompt('Indique el número de columnas')
     const tabla = document.createElement('table')
@@ -27,8 +27,8 @@ function generarNum(max) {
     const random = Math.floor(Math.random() * max + 1);
     return random;
 }
-function limpiar() {
-    div.childNodes.forEach(element => {
-        div.removeChild(element)
+function limpiar(contenedor) {
+    contenedor.childNodes.forEach(hijo => {
+        contenedor.removeChild(hijo)
     });
 }
