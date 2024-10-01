@@ -8,7 +8,6 @@ divFotos.className='gallery'
 divPrincipal.appendChild(divFotos)
 
 boton.addEventListener('click',()=>{
-    console.log('dads')
     let botonX = document.createElement('button')
     contadorBotones++
     botonX.textContent='Botón ' + contadorBotones
