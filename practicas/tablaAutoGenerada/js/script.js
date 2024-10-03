@@ -27,6 +27,10 @@ function generarNum(max) {
     const random = Math.floor(Math.random() * max + 1);
     return random;
 }
+
+
+
+//Funcion limpiar importante
 function limpiar(contenedor) {
     contenedor.childNodes.forEach(hijo => {
         contenedor.removeChild(hijo)
