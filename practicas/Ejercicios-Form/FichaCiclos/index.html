@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ficha FP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <form action="#" method="post" id="validar">
+
+        <div class="ciclo">
+            <h1>¿Qué ciclo estás cursando?</h1>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="ciclo" id="DAM" value="DAM">
+                    DAM
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="ciclo" id="ASIR" value="ASIR">
+                    ASIR
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="ciclo" id="SMR" value="SMR">
+                    SMR
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="ciclo" id="DAW" value="DAW">
+                    DAW
+                </label><br>
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="ciclo" id="FPB" value="FPB">
+                    FPB
+                </label><br>
+            </div>
+            <small id="smCiclos" class="text-danger"></small>
+        </div>
+
+        <div class="modulos">
+            <h1>Módulos:</h1>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="modulo" id="DIW" value="DIW">
+                Diseño Interfaces Web
+              </label><br>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="modulo" id="DEC" value="DEC">
+                Desarrollo Entorno Cliente
+              </label><br>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="modulo" id="DES" value="DES">
+                Desarrollo Entorno Servidor
+              </label><br>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="modulo" id="DIM" value="DIM">
+                Desarrollo Interfaces Multiplataforma
+              </label><br>
+            </div>
+            <small id="smModulos" class="text-danger"></small><br>
+            <input name="enviar" id="enviar" class="btn btn-primary" type="submit" value="Enviar">
+        </div>
+
+        <div class="curso">
+            <h1>Curso:</h1>
+            <div class="form-group">
+              <label for=""></label>
+              <select class="form-control col-1" name="curso" id="curso">
+                <option>1º</option>
+                <option>2º</option>
+              </select>
+            </div>
+            <small id="smModulos" class="text-danger"></small>
+        </div>
+
+        <div class="nombre">
+            <h1>Nombre:</h1>
+            <div class="form-group">
+              <input type="text"
+                class="form-control col-2" name="nombre" id="nombre" placeholder="Su nombre">
+            </div>
+        </div>
+
+        <div class="horas">
+            <h3>Horas asistidas</h3>
+            <div class="form-group">
+              <label for=""></label>
+              <select class="form-control" name="horas" id="horas">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="comentarios">
+            <h2>Comentarios</h2>
+            <textarea name="comentario" id="comentario" cols="200" rows="10" placeholder="Indique aquí sus comentarios"></textarea>
+        </div>
+
+    </form>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
