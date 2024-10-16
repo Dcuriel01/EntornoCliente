@@ -1,0 +1,42 @@
+[
+    {
+        "ciudad_ID": "1",
+        "ciudad_nombre": "Campillo Deleitosa",
+        "ciudad_poblacion": "45",
+        "video": "<iframe width=\"280\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/Zn6suSsuyfA?si=QR4WAVo964MDrK92\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen><\/iframe>",
+        "imagen": "https:\/\/s2.wklcdn.com\/image_2\/80118\/12224420\/7495649Master.jpg",
+        "mapa": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3069.6321176247425!2d-5.575986134625693!3d39.7029747294545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd157ab86c38299f%3A0x71b65022b7891a48!2s10329%20Campillo%20de%20Deleitosa%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1612031924900!5m2!1ses!2ses\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>"
+    },
+    {
+        "ciudad_ID": "2",
+        "ciudad_nombre": "Mesas de Ibor",
+        "ciudad_poblacion": "123",
+        "video": "<iframe width=\"280\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/zDn9tADUtEM\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+        "imagen": "https:\/\/miguelurbinagomez.files.wordpress.com\/2011\/12\/img_5958.jpg",
+        "mapa": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d6134.590780131146!2d-5.550492373383535!3d39.75547576778977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1564bb5f191043%3A0x8b05fa520331bb46!2s10329%20Mesas%20de%20Ibor%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1612086098443!5m2!1ses!2ses\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>"
+    },
+    {
+        "ciudad_ID": "3",
+        "ciudad_nombre": "Romangorgo",
+        "ciudad_poblacion": "235",
+        "video": "<iframe width=\"280\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/CtVWupv10w4?si=RJcOO3B5_0EXUEq4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen><\/iframe>",
+        "imagen": "https:\/\/romangordo.org\/wp-content\/uploads\/2017\/09\/web.jpg",
+        "mapa": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d6135.801145700044!2d-5.703545323385202!3d39.74188421779697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1578c325a68bdf%3A0x3460cc08caea4ca2!2s10359%20Romangordo%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1612087068925!5m2!1ses!2ses\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>"
+    },
+    {
+        "ciudad_ID": "4",
+        "ciudad_nombre": "Fresnedoso de Ibor",
+        "ciudad_poblacion": "250",
+        "video": "<iframe width=\"280\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/rL4CTZQ4Uaw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+        "imagen": "https:\/\/s1.wklcdn.com\/image_20\/610705\/28359762\/18116953Master.jpg",
+        "mapa": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d6140.874710354406!2d-5.512656173392045!3d39.68486941782751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd156f62c6cc7351%3A0x89e5116fa3cb7403!2s10328%20Fresnedoso%20de%20Ibor%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1612087683969!5m2!1ses!2ses\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>"
+    },
+    {
+        "ciudad_ID": "5",
+        "ciudad_nombre": "Cabanas del castillo",
+        "ciudad_poblacion": "13",
+        "video": "<iframe width=\"280\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/H5CyMb5XvP4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen><\/iframe>",
+        "imagen": "https:\/\/i.pinimg.com\/originals\/72\/99\/bf\/7299bf058c2c2c90df65ff07f89897de.jpg",
+        "mapa": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3076.5355461540225!2d-5.513480234630338!3d39.54753042947569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd156ce5d74a6057%3A0x5ec3c17b41c2a75c!2s10373%20Caba%C3%B1as%20del%20Castillo%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1612420268961!5m2!1ses!2ses\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0;\" allowfullscreen=\"\" aria-hidden=\"false\" tabindex=\"0\"><\/iframe>"
+    }
+]
