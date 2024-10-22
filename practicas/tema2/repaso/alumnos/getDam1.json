@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "alumno": "Lola Macarney",
+        "nota1": "8",
+        "nota2": "8",
+        "nota3": "8",
+        "nota4": 8,
+        "nota5": 8,
+        "nota6": 9
+    },
+    {
+        "id": 2,
+        "alumno": "Paco Lenon",
+        "nota1": "9",
+        "nota2": "7",
+        "nota3": "2",
+        "nota4": 4,
+        "nota5": 3,
+        "nota6": 3
+    },
+    {
+        "id": 3,
+        "alumno": "Manolo Kabezabolo",
+        "nota1": "6",
+        "nota2": "5",
+        "nota3": "3",
+        "nota4": 3,
+        "nota5": 4,
+        "nota6": 5
+    },
+    {
+        "id": 4,
+        "alumno": "Paquita Barrios",
+        "nota1": "10",
+        "nota2": "10",
+        "nota3": "10",
+        "nota4": 8,
+        "nota5": 7,
+        "nota6": 6
+    },
+    {
+        "id": 5,
+        "alumno": "Mariano Gallego",
+        "nota1": "4",
+        "nota2": "8",
+        "nota3": "8",
+        "nota4": 6,
+        "nota5": 6,
+        "nota6": 6
+    },
+    {
+        "id": 6,
+        "alumno": "Petra kelly",
+        "nota1": "10",
+        "nota2": "10",
+        "nota3": "10",
+        "nota4": 10,
+        "nota5": 10,
+        "nota6": 10
+    },
+    {
+        "id": 7,
+        "alumno": "Federica de las Kasas",
+        "nota1": "7",
+        "nota2": "7",
+        "nota3": "7",
+        "nota4": 7,
+        "nota5": 7,
+        "nota6": 7
+    },
+    {
+        "id": 8,
+        "alumno": "Anselmo Fuerte",
+        "nota1": "8",
+        "nota2": "7",
+        "nota3": "8",
+        "nota4": 4,
+        "nota5": 5,
+        "nota6": 5
+    },
+    {
+        "id": 9,
+        "alumno": "Jhony Juerga",
+        "nota1": "1",
+        "nota2": "1",
+        "nota3": "9",
+        "nota4": 9,
+        "nota5": 9,
+        "nota6": 9
+    },
+    {
+        "id": 10,
+        "alumno": "Alberto Platano",
+        "nota1": "5",
+        "nota2": "4",
+        "nota3": "3",
+        "nota4": 2,
+        "nota5": 3,
+        "nota6": 2
+    }
+]

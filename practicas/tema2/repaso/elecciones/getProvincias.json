@@ -1,0 +1,186 @@
+[
+    {
+        "nombreProvincia": "Ibores",
+        "votosPA": 21414,
+        "votosPB": 3453464,
+        "votosPC": 543634,
+        "votosPD": 45346,
+        "Representantes": 10
+    },
+    {
+        "nombreProvincia": "Zamora",
+        "votosPA": 1000,
+        "votosPB": 5000,
+        "votosPC": 8000,
+        "votosPD": 10000,
+        "Representantes": 3
+    },
+    {
+        "nombreProvincia": "Valladolid",
+        "votosPA": 43299,
+        "votosPB": 32901,
+        "votosPC": 13222,
+        "votosPD": 9878,
+        "Representantes": 5
+    },
+    {
+        "nombreProvincia": "Soria",
+        "votosPA": 10000,
+        "votosPB": 20000,
+        "votosPC": 30000,
+        "votosPD": 40000,
+        "Representantes": 3
+    },
+    {
+        "nombreProvincia": "orense",
+        "votosPA": 99999,
+        "votosPB": 9999,
+        "votosPC": 999,
+        "votosPD": 99,
+        "Representantes": 2
+    },
+    {
+        "nombreProvincia": "cuenca",
+        "votosPA": 43000,
+        "votosPB": 54446,
+        "votosPC": 87777,
+        "votosPD": 345555,
+        "Representantes": 4
+    },
+    {
+        "nombreProvincia": "almeria",
+        "votosPA": 124512,
+        "votosPB": 3523,
+        "votosPC": 6434,
+        "votosPD": 657,
+        "Representantes": 12
+    },
+    {
+        "nombreProvincia": "Huelva",
+        "votosPA": 89887,
+        "votosPB": 7777,
+        "votosPC": 888,
+        "votosPD": 88,
+        "Representantes": 4
+    },
+    {
+        "nombreProvincia": "Guadalajara",
+        "votosPA": 1200,
+        "votosPB": 3444,
+        "votosPC": 234,
+        "votosPD": 323,
+        "Representantes": 2
+    },
+    {
+        "nombreProvincia": "Navalmoral",
+        "votosPA": 888,
+        "votosPB": 8,
+        "votosPC": 8,
+        "votosPD": 2323,
+        "Representantes": 1
+    },
+    {
+        "nombreProvincia": "Salamanca",
+        "votosPA": 32345,
+        "votosPB": 88888,
+        "votosPC": 888,
+        "votosPD": 88,
+        "Representantes": 5
+    },
+    {
+        "nombreProvincia": "Cadiz",
+        "votosPA": 1000,
+        "votosPB": 2000,
+        "votosPC": 3000,
+        "votosPD": 4000,
+        "Representantes": 5
+    },
+    {
+        "nombreProvincia": "LaVera",
+        "votosPA": 888,
+        "votosPB": 88,
+        "votosPC": 88,
+        "votosPD": 4,
+        "Representantes": 4
+    },
+    {
+        "nombreProvincia": "Trujillo",
+        "votosPA": 100,
+        "votosPB": 8273,
+        "votosPC": 9374,
+        "votosPD": 89437,
+        "Representantes": 4
+    },
+    {
+        "nombreProvincia": "Cacejoz",
+        "votosPA": 38,
+        "votosPB": 56,
+        "votosPC": 18,
+        "votosPD": 2,
+        "Representantes": 1
+    },
+    {
+        "nombreProvincia": "Utrera",
+        "votosPA": 354234,
+        "votosPB": 24234,
+        "votosPC": 42342,
+        "votosPD": 234234,
+        "Representantes": 6
+    },
+    {
+        "nombreProvincia": "Talayuela",
+        "votosPA": 8888,
+        "votosPB": 7777,
+        "votosPC": 6666,
+        "votosPD": 555,
+        "Representantes": 2
+    },
+    {
+        "nombreProvincia": "Pontevedra",
+        "votosPA": 10000,
+        "votosPB": 20000,
+        "votosPC": 2000,
+        "votosPD": 200,
+        "Representantes": 3
+    },
+    {
+        "nombreProvincia": "Valencia",
+        "votosPA": 2344,
+        "votosPB": 24234,
+        "votosPC": 42342,
+        "votosPD": 345644,
+        "Representantes": 20
+    },
+    {
+        "nombreProvincia": "Majadas",
+        "votosPA": 1234,
+        "votosPB": 5678,
+        "votosPC": 2345,
+        "votosPD": 9876,
+        "Representantes": 4
+    },
+    {
+        "nombreProvincia": "Albacete",
+        "votosPA": 200,
+        "votosPB": 300,
+        "votosPC": 400,
+        "votosPD": 100,
+        "Representantes": 1
+    },
+    {
+        "nombreProvincia": "Sevilla",
+        "votosPA": 6262,
+        "votosPB": 2561498,
+        "votosPC": 12516,
+        "votosPD": 5345664,
+        "Representantes": 34
+    },
+    {
+        "nombreProvincia": "Hervas",
+        "votosPA": 6566,
+        "votosPB": 33333,
+        "votosPC": 99989,
+        "votosPD": 89,
+        "Representantes": 4
+    }
+]

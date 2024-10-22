@@ -1,5 +1,5 @@
 const urlPlatos = 'getPlatos.json'
-const urlCocineros = 'getCocinero.json'
+const urlCocineros = 'getPanaderos.json'
 const listaPanaderias = ["Jesus", "Almagro", "Julia", "Andalusi", "JoseAntonio", "el trigal"]
 const listaEnlaces = ["panaderiajesus.com", "panalmagro.es",
     "panaderiasjulia.es", "panaderialaandalusi.com", "panaderiajoseantonio.com",
@@ -65,14 +65,13 @@ function mostrarPlatos(datos) {
 }
 
 function mostrarCocineros(datos) {
-    const cocineros = document.querySelectorAll('.chef-member')
-    console.log(cocineros)
+    const imgCocineros = document.querySelectorAll('.member-img img')
+    const infCocineros = document.querySelectorAll('.member-info')
     datos.forEach((dato,i)=> {
         if (i<4) {
-            cocineros[i].children[0].firstElementChild.setAttribute('src',dato.imagen)
-            cocineros[i].children[1].textContent=dato.nombre
-            cocineros[i].children[2].textContent=dato.ingredientes
-            cocineros[i].children[3].textContent=dato.precio
+            imgCocineros[i].setAttribute('src',dato.imagen)
+            infCocineros[i].querySelector('h4').textContent=dato.nombre
+            infCocineros[i].querySelector('span').textContent=dato.funcion
         }
         
     });
