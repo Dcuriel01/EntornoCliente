@@ -21,15 +21,16 @@ function inicio() {
     //Numeros autogenerados
     const numeros = document.querySelectorAll('.purecounter')
     i = 0
+    let n = 0
     for (const num of numeros) {
         if (i == 0) {
-            let n = generarNum(20);
+            n = generarNum(20);
             num.setAttribute('data-purecounter-end', n)
         }else if(i == 1){
-            let n = generarNum(200);
+            n = generarNum(200);
             num.setAttribute('data-purecounter-end', n)
         }else{
-            let n = generarNum(2000);
+            n = generarNum(2000);
             num.setAttribute('data-purecounter-end', n)
         }
         i++
