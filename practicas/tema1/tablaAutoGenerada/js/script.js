@@ -32,7 +32,7 @@ function generarNum(max) {
 
 //Funcion limpiar importante
 function limpiar(contenedor) {
-    contenedor.childNodes.forEach(hijo => {
-        contenedor.removeChild(hijo)
-    });
+    while (contenedor.hasChildNodes()) {
+        contenedor.removeChild(contenedor.firstChild)
+    }
 }

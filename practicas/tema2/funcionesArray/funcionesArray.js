@@ -9,7 +9,7 @@
 
 // //pop() : elimina el último elemento del array y lo puede devolver
 // let vector = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
-// console.log('Vector completo: ' +vector);
+// console.log('Vector completo: ' +vector)
 // let elemetoBorrado = vector.pop()
 // console.log('Vector despues de pop: ' +vector);
 // console.log('Elemento borrado: ' + elemetoBorrado)
@@ -29,14 +29,14 @@
 
 
 // const vector=[8,5,4,9,22,1]
-// console.log(vector.sort());
-// console.log(vector.sort().reverse());
+// console.log(vector.sort())
+// console.log(vector.sort().reverse())
 
 // const letras=['D','A','R','S','M']
-// console.log(letras.sort());
-// console.log(letras.sort().reverse());
+// console.log(letras.sort())
+// console.log(letras.sort().reverse())
 
-// console.log(vector.sort((a, b) => a - b));
+// console.log(vector.sort((a, b) => a - b))
 
 const fruta = 
 [{ nombre: 'naranja', precio: 4 , stock: 6300 }, 
@@ -44,6 +44,5 @@ const fruta =
 { nombre: 'kiwi', precio: 3 , stock: 4500}] 
 const listadoPorPrecio = fruta.sort((a, b) => a.precio - b.precio)
 const listadoPorStock = fruta.sort((a, b) => a.stock - b.stock)
-console.log(listadoPorPrecio);
+console.log(listadoPorPrecio)
 console.log(listadoPorStock)
-
