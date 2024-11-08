@@ -100,7 +100,7 @@ function ordenar(data){
     })
 }
 
-function mostrar(array,) {
+function mostrar(array) {
     array.forEach(coche => {
         const li = document.createElement('li')
         li.textContent=`Color: ${coche.color}, Marca: ${coche.marca}, Modelo: ${coche.modelo}, Consumo: ${coche.consumo}, Precio: ${coche.precio}, Kms: ${coche.kms}, Tipo motor: ${coche.tipoMotor},`
