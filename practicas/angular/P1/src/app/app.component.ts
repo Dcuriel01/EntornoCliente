@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'P1';
+  titulo:string = 'Proyecto1';
+  numero:number = Math.floor(Math.random()*100)
 }
