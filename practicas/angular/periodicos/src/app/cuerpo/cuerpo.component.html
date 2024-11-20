@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <p>{{ segundos }}</p>
+      <button (click)="cuentaAtras()" [disabled]="activado">{{ boton }}</button>
+    </div>
+    <div class="col-lg-8">
+      <div [style.backgroundColor]="color" [style.font-size]="tamanio" class="text-center">
+        Desarrollo de aplicaciones Web
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+      <ul *ngFor="let persona of personas;let indice = index">
+        <li (mouseover)="verEdad(indice)" (mouseleave)="verNombre()">{{ sobreIndice==indice ? persona.edad : persona.nombre }}</li>
+        </ul>
+    </div>
+    <div class="col-lg-6">
+      <ul *ngFor="let periodico of periodicos;let indice = index">
+        <a href="{{periodico.url}}"><li (mouseover)="verNombreP(indice)" (mouseleave)="verUrl()">{{ sobreIndiceP==indice ? periodico.url : periodico.nombre }}</li></a>
+        </ul>
+    </div>
+  </div>
+</div>
