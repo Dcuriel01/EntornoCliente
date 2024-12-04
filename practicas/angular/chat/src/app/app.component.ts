@@ -8,6 +8,7 @@ import { ChatModule } from './chat/chat.module';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   mensaje: ChatModule = {
     id: 0,
     fecha: '',
@@ -18,11 +19,15 @@ export class AppComponent {
   constructor(private httpCliente: ServicioService) {
   }
   leerMensajes() {
-    this.httpCliente.leerMensaje().subscribe((x) => (this.listaMensajes = x))
+    this.httpCliente.leerMensaje().subscribe(x => this.listaMensajes = x)
   }
   aniadirMensaje(form:{value:ChatModule}) {
     this.httpCliente.crearMensaje(form.value).subscribe((c:ChatModule)=>(this.mensaje=c))
   }
-
-
+  eliminarTodos() {
+    this.httpCliente.borrarMensajes().subscribe()
+  }
+  eliminarMensaje(id:number) {
+    this.httpCliente.eliminarMensaje(id).subscribe()
+  }
 }
