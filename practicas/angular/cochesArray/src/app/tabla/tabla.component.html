@@ -1,0 +1,62 @@
+<mat-form-field>
+  <mat-label>Filtro (cualquier campo)</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
+</mat-form-field>
+<button mat-raised-button color="accent" (click)="abrirDialogo()">Nuevo coche</button>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="datasource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="matricula">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Matricula </th>
+      <td mat-cell *matCellDef="let coche"> {{coche.matricula}} </td>
+    </ng-container>
++
+    <!-- nombre Column -->
+    <ng-container matColumnDef="marcaModelo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> MarcaModelo </th>
+      <td mat-cell *matCellDef="let coche"> {{coche.marcaModelo}} </td>
+    </ng-container>
+
+    <!-- precio Column -->
+    <ng-container matColumnDef="km">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Km </th>
+      <td mat-cell *matCellDef="let coche"> {{coche.km}} </td>
+    </ng-container>
+
+    <!-- unidades Column -->
+    <ng-container matColumnDef="color">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+      <td mat-cell *matCellDef="let coche"> {{coche.color}} </td>
+    </ng-container>
+
+    <!-- ELIMINAR Column -->
+    <ng-container matColumnDef="eliminar">
+      <th mat-header-cell *matHeaderCellDef> ELIMINAR</th>
+      <td mat-cell *matCellDef="let coche let i=index">
+        <button mat-raised-button color="warn" focusable="false" (click)="borrarFila(coche.matricula)">
+         ELIMINAR
+        </button>
+      </td>
+    </ng-container>
+     <!-- MODIFICAR Column -->
+     <ng-container matColumnDef="modificar">
+      <th mat-header-cell *matHeaderCellDef> MODIFICAR</th>
+      <td mat-cell *matCellDef="let coche">
+        <button mat-raised-button color="primary" focusable="false" (click)="abrirDialogoModificar(coche)">
+         Modificar
+        </button>
+      </td>
+     </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let Persona; columns: columnas;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No se encontraron frutas "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Selecciona página de empleados"></mat-paginator>
+</div>

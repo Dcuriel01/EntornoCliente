@@ -1,0 +1,26 @@
+<div>
+  <h1 mat-dialog-title>Añadir Coche</h1>
+  <div mat-dialog-content>
+      <div class="contenedor" >
+
+          <mat-form-field>
+              <input matInput [(ngModel)]="data.matricula" type="text" placeholder="inserta matricula">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput [(ngModel)]="data.marcaModelo" type="text" placeholder="inserta marca">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput [(ngModel)]="data.km" type="number" placeholder="inserta kms">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [(ngModel)]="data.color" type="text" placeholder="inserta color">
+          </mat-form-field>
+      </div>
+  </div>
+  <div mat-dialog-actions>
+      <button mat-button (click)="Cancelar()">Cancelar</button>
+      <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirmar</button>
+  </div>
+</div>
