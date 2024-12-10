@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CuadroDialogoComponent } from './cuadro-dialogo/cuadro-dialogo.component'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import {MatIconModule} from '@angular/material/icon';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatButtonModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

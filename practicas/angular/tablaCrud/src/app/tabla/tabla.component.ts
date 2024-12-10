@@ -13,17 +13,26 @@ import { ServicioEmpService } from '../servicio-emp.service';
   templateUrl: './tabla.component.html',
   styleUrls: ['./tabla.component.css'],
 })
-export class TablaComponent implements OnInit {
+export class TablaComponent implements OnInit,AfterViewInit {
   // public dialog: MatDialog,
-  constructor(private httpCliente: ServicioEmpService) {}
+  constructor(private httpCliente: ServicioEmpService) {
+    this.httpCliente.leerEmpleados().subscribe((x)=>{this.dataSource.data=x});
+  }
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    // this.dataSource.sort = this.sort;
+  }
   ngOnInit(): void {
-    // this.httpCliente.leerEmpleados.suscribe((x)=>{this.dataSource.data=x});
+    this.httpCliente.leerEmpleados().subscribe((x)=>{this.dataSource.data=x});
   }
   modificarEmpleado(_t98: any) {}
   eliminarEmpleado(arg0: any) {}
   empleado!: Empleado;
 
-  buscador($event: KeyboardEvent) {}
+  buscador(event: KeyboardEvent) {
+    const filtro = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filtro.trim().toLowerCase();
+  }
   displayedColumns: string[] = [
     'id',
     'nombre',
@@ -35,7 +44,7 @@ export class TablaComponent implements OnInit {
     'modificar',
   ];
   datos: Empleado[] = [];
-  dataSource!: MatTableDataSource<Empleado>;
+  dataSource= new MatTableDataSource<Empleado>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
