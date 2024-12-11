@@ -1,1 +1,7 @@
-<p>brecol works!</p>
+<div class="cuadrado" [ngStyle]="{ 'background-color': color}">
+  <div class="text">
+    Background Color : {{color}}
+  </div>
+</div>
+<button (click)="pararIntervalo()">Parar</button>
+<button (click)="reanudarIntervalo()">Reanudar</button>

@@ -1,1 +1,17 @@
-<p>coliflor works!</p>
+<div class="container">
+  <div class="row">
+    <div>
+      <h1>Tradructor</h1>
+    </div>
+    <div class="col-lg-12">
+      <label for="">Introduzca un numero del 1 al 10</label>
+      <input type="number" class="form-control" [(ngModel)]="numero" (ngModelChange)="traducir()"/>
+      <div>
+        <h2>In English:{{numIng}}</h2>
+      </div>
+      <div>
+        <h2>En Español:{{numEspa}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
