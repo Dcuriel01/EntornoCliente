@@ -1,0 +1,13 @@
+<div class="text-center mt-5">
+  <!-- Input para ingresar el texto -->
+  <input [(ngModel)]="texto" type="text" class="form-control w-50 mb-3" placeholder="Escribe algo...">
+
+  <!-- Botón para enviar el texto -->
+  <button (click)="agregarItem()" class="btn btn-primary">Enviar</button>
+
+  <!-- Lista de elementos agregados -->
+  <ul class="mt-3">
+    <li *ngFor="let item of listaItems">{{ item }}</li>
+  </ul>
+</div>
+

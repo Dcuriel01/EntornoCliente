@@ -1,0 +1,51 @@
+<mat-form-field>
+  <mat-label>Filtro (cualquier campo)</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
+</mat-form-field>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="datasource" matSort>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+      <td mat-cell *matCellDef="let producto"> {{producto.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+      <td mat-cell *matCellDef="let producto"> {{producto.texto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+      <td mat-cell *matCellDef="let producto"> {{producto.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="photo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Imagen </th>
+      <td mat-cell *matCellDef="let producto"> <img src="{{producto.photo}}" ></td>
+    </ng-container>
+
+    <ng-container matColumnDef="stockActual">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> stockActual </th>
+      <td mat-cell *matCellDef="let producto"> {{producto.stockActual}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="stockMinimo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> stockMinimo </th>
+      <td mat-cell *matCellDef="let producto"> {{producto.stockMinimo}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let imagen; columns: columnas;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No se encontraron imagenes "{{input.value}}"</td>
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100, 150, 200, 250]" aria-label="Selecciona página de imagenes"></mat-paginator>
+</div>
+
+
+

@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <!-- Imagen que se muestra en la parte superior -->
+  <img src="assets/dam.jpg" alt="Imagen de ejemplo" class="img-fluid my-4">
+
+  <h2>Seleccione una ruta:</h2>
+
+  <!-- Botones que redirigen a las rutas -->
+  <div class="btn-group">
+    <button class="btn btn-primary" (click)="selectComponent('bd')">Ir a BD</button>
+    <button class="btn btn-success" (click)="selectComponent('di')">Ir a DI</button>
+    <button class="btn btn-info" (click)="selectComponent('pmms')">Ir a PMMS</button>
+  </div>
+
+  <!-- Contenedor donde se mostrará el componente seleccionado -->
+  <div class="my-4">
+    <!-- Mostrar los componentes debajo de la imagen usando ngIf -->
+    <app-bd *ngIf="selectedComponent === 'bd'"></app-bd>
+    <app-di *ngIf="selectedComponent === 'di'"></app-di>
+    <app-pmms *ngIf="selectedComponent === 'pmms'"></app-pmms>
+  </div>
+</div>

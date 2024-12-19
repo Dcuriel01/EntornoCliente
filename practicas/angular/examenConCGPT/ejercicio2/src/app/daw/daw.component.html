@@ -1,0 +1,22 @@
+
+<div class="container text-center">
+  <!-- Imagen que se muestra en la parte superior -->
+  <img src="assets/daw.png" alt="Imagen de ejemplo" class="img-fluid my-4">
+
+  <h2>Seleccione una ruta:</h2>
+
+  <!-- Botones que redirigen a las rutas -->
+  <div class="btn-group">
+    <button class="btn btn-primary" (click)="selectComponent('diw')">Ir a DIW</button>
+    <button class="btn btn-success" (click)="selectComponent('dews')">Ir a DEWS</button>
+    <button class="btn btn-info" (click)="selectComponent('dewc')">Ir a DEWC</button>
+  </div>
+
+  <!-- Contenedor donde se mostrará el componente seleccionado -->
+  <div class="my-4">
+    <!-- Mostrar los componentes debajo de la imagen usando ngIf -->
+    <app-diw *ngIf="selectedComponent === 'diw'"></app-diw>
+    <app-dews *ngIf="selectedComponent === 'dews'"></app-dews>
+    <app-dewc *ngIf="selectedComponent === 'dewc'"></app-dewc>
+  </div>
+</div>

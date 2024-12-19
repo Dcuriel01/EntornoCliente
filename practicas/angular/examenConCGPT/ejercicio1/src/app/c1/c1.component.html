@@ -1,0 +1,8 @@
+<div class="text-center mt-5">
+  <!-- Los botones, iterando sobre el array de nombres -->
+  <div *ngFor="let nombre of nombresBotones; let i = index">
+    <button class="btn btn-{{ obtenerColor(i) }} m-2" (click)="cambiarColor(i)">
+      {{ nombre }}
+    </button>
+  </div>
+</div>

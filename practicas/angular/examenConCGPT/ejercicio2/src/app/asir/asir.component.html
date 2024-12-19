@@ -1,0 +1,22 @@
+
+<div class="container text-center">
+  <!-- Imagen que se muestra en la parte superior -->
+  <img src="assets/asir.jpg" alt="Imagen de ejemplo" class="img-fluid my-4">
+
+  <h2>Seleccione una ruta:</h2>
+
+  <!-- Botones que redirigen a las rutas -->
+  <div class="btn-group">
+    <button class="btn btn-primary" (click)="selectComponent('bd')">Ir a BD</button>
+    <button class="btn btn-success" (click)="selectComponent('fh')">Ir a FH</button>
+    <button class="btn btn-info" (click)="selectComponent('lm')">Ir a LM</button>
+  </div>
+
+  <!-- Contenedor donde se mostrará el componente seleccionado -->
+  <div class="my-4">
+    <!-- Mostrar los componentes debajo de la imagen usando ngIf -->
+    <app-bd *ngIf="selectedComponent === 'bd'"></app-bd>
+    <app-fh *ngIf="selectedComponent === 'fh'"></app-fh>
+    <app-lm *ngIf="selectedComponent === 'lm'"></app-lm>
+  </div>
+</div>

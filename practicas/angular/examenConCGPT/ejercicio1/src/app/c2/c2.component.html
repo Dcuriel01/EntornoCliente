@@ -1,0 +1,21 @@
+<div class="text-center mt-5">
+  <!-- Mostramos el contador -->
+  <h1>Contador: {{ contador }}</h1>
+
+  <!-- Botón para iniciar el contador -->
+  <button
+    class="btn btn-success m-2"
+    (click)="iniciarContador()"
+    [disabled]="contadorActivo">
+    Iniciar
+  </button>
+
+  <!-- Botón para parar el contador -->
+  <button
+    class="btn btn-danger m-2"
+    (click)="pararContador()"
+    [disabled]="!contadorActivo">
+    Parar
+  </button>
+</div>
+
