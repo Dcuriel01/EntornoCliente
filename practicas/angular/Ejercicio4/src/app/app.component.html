@@ -1,0 +1,65 @@
+<form [formGroup]="FRegistro">
+  <mat-form-field appearance="outline">
+    <mat-label>Visa</mat-label>
+    <input matInput formControlName="visa" />
+    <mat-error *ngIf="FRegistro.get('visa')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('visa')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Master card</mat-label>
+    <input matInput formControlName="master" />
+    <mat-error *ngIf="FRegistro.get('master')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('master')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>American Express</mat-label>
+    <input matInput formControlName="american" />
+    <mat-error *ngIf="FRegistro.get('american')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('american')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Discover</mat-label>
+    <input matInput formControlName="discover" />
+    <mat-error *ngIf="FRegistro.get('discover')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('discover')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Diners club</mat-label>
+    <input matInput formControlName="diners" />
+    <mat-error *ngIf="FRegistro.get('diners')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('diners')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>JCB</mat-label>
+    <input matInput formControlName="jcb" />
+    <mat-error *ngIf="FRegistro.get('jcb')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('jcb')?.hasError('pattern')">
+      No cumple formato
+    </mat-error>
+  </mat-form-field>
+  <button type="submit" class="btn btn-primary" [disabled]="!FRegistro.valid">
+    Enviar
+  </button>
+</form>

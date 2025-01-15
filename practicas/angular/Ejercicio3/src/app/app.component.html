@@ -1,0 +1,69 @@
+<form [formGroup]="FRegistro">
+  <mat-form-field appearance="outline">
+    <mat-label>Solo letras</mat-label>
+    <input matInput formControlName="letras" />
+    <mat-error *ngIf="FRegistro.get('letras')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('letras')?.hasError('pattern')">
+      Solo letras
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Solo numeros</mat-label>
+    <input matInput formControlName="num" />
+    <mat-error *ngIf="FRegistro.get('num')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('num')?.hasError('pattern')">
+      Solo numeros
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Solo mayusculas</mat-label>
+    <input matInput formControlName="mayus" />
+    <mat-error *ngIf="FRegistro.get('mayus')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('mayus')?.hasError('pattern')">
+      Solo mayusculas
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Rango (100-200)</mat-label>
+    <input matInput formControlName="rang" />
+    <mat-error *ngIf="FRegistro.get('rang')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('rang')?.hasError('min')">
+      minimo 100
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('rang')?.hasError('max')">
+      maximo 200
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Exactamente 5</mat-label>
+    <input matInput formControlName="cinco" />
+    <mat-error *ngIf="FRegistro.get('cinco')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('cinco')?.hasError('pattern')">
+      solo 5 numeros
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Exactamente 10 letras</mat-label>
+    <input matInput formControlName="diezLetras" />
+    <mat-error *ngIf="FRegistro.get('diezLetras')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('diezLetras')?.hasError('pattern')">
+      Exactamente 10 letras
+    </mat-error>
+  </mat-form-field>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!FRegistro.valid">
+    Enviar
+  </button>
+</form>

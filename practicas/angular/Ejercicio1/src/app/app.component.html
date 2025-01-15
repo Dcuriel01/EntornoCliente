@@ -1,0 +1,49 @@
+<form [formGroup]="FRegistro">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" />
+    <mat-error *ngIf="FRegistro.get('nombre')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('nombre')?.hasError('maxlength')">
+      Demasiados caracteres
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="FRegistro.get('email')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('email')?.hasError('pattern')">
+      Demasiados caracteres
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Edad</mat-label>
+    <input matInput formControlName="edad" />
+    <mat-error *ngIf="FRegistro.get('edad')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('edad')?.hasError('min')">
+      Minimo 18
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Salario</mat-label>
+    <input matInput formControlName="salario" />
+    <mat-error *ngIf="FRegistro.get('salario')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('salario')?.hasError('min')">
+      Minimo 900
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('salario')?.hasError('max')">
+      Maximo 1200
+    </mat-error>
+  </mat-form-field>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!FRegistro.valid">
+    Enviar
+  </button>
+</form>

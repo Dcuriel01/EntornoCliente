@@ -1,0 +1,52 @@
+<div>
+  <form [formGroup]="FRegistro">
+  <label>Visa</label>
+  <input formControlName="visa"/>
+  <span *ngIf="FRegistro.get('visa')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('visa')?.hasError('pattern')">
+    No cumple patron visa
+  </span>
+  <label>MasterCard</label>
+  <input matInput formControlName="master"/>
+  <span *ngIf="FRegistro.get('master')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('master')?.hasError('pattern')">
+    No cumple patron Master
+  </span>
+  <label>American Expresss</label>
+  <input matInput formControlName="american"/>
+  <span *ngIf="FRegistro.get('american')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('american')?.hasError('pattern')">
+    No cumple patron American
+  </span>
+  <label>Discover</label>
+  <input matInput formControlName="discover"/>
+  <span *ngIf="FRegistro.get('discover')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('discover')?.hasError('pattern')">
+    No cumple patron Discover
+  </span>
+  <label>Diners Club</label>
+  <input matInput formControlName="diners"/>
+  <span *ngIf="FRegistro.get('diners')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('visa')?.hasError('pattern')">
+    No cumple patron Diners
+  </span>
+  <label>JCB</label>
+  <input matInput formControlName="jcb"/>
+  <span *ngIf="FRegistro.get('jcb')?.hasError('required')">
+    Campo requerido
+  </span>
+  <span *ngIf="FRegistro.get('jcb')?.hasError('pattern')">
+    No cumple patron jcb
+  </span>
+  </form>
+</div>
