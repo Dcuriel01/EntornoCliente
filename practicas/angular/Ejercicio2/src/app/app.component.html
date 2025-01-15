@@ -1,0 +1,42 @@
+<form [formGroup]="FRegistro">
+  <mat-form-field>
+    <mat-label>Selecciona hotel</mat-label>
+    <mat-select disableRipple formControlName="select">
+      <mat-option value="1">Hotel 1</mat-option>
+      <mat-option value="2">Hotel 2</mat-option>
+      <mat-option value="3">Hotel 3</mat-option>
+    </mat-select>
+    <mat-error *ngIf="FRegistro.get('select')?.hasError('required')">
+      Campo requerido
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Seleccione fecha de entrada</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="fechaEntrada">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="FRegistro.get('fechaEntrada')?.hasError('fechaFutura')">
+      La fecha no puede ser anterior
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker.open()">Open</button>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Seleccione fecha de salida</mat-label>
+    <input matInput [matDatepicker]="picker2" formControlName="fechaSalida">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker #picker2></mat-datepicker>
+    <mat-error *ngIf="FRegistro.get('fechaSalida')?.hasError('fechaFutura')">
+      La fecha no puede ser anterior
+    </mat-error>
+    <mat-error *ngIf="FRegistro.get('fechaSalida')?.hasError('fechaNoPosterior')">
+      La fecha no puede ser anterior a la de entrada
+    </mat-error>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker2.open()">Open</button>
+
+
+  <button type="submit" class="btn btn-primary" [disabled]="!FRegistro.valid">
+    Enviar
+  </button>
+</form>
