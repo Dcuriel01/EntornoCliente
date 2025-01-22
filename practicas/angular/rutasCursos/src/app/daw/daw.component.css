@@ -1,0 +1,13 @@
+button{
+  margin: 20px;
+    background-color: #006400;
+    color: white;
+    border-color: #004d00;
+}
+button:hover{
+  background-color: #004d00;
+  border-color: #003300;
+}
+img{
+  max-width: 500px;
+}
