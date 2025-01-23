@@ -1,0 +1,18 @@
+
+button{
+  margin: 20px;
+}
+.navbar-brand{
+  margin-left: 10px;
+}
+.bg-green {
+  background-color: #28a745 !important; /* Color verde */
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important; /* Color blanco para el texto */
+}
+
+.nav-link:hover {
+  color: #d4edda !important; /* Color verde claro al pasar el ratón */
+}

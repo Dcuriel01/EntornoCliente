@@ -1,0 +1,11 @@
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="col-6 text-center">
+    <h1>Euros</h1>
+    <input type="number" value="{{euros}}" [(ngModel)]="euros" (ngModelChange)="cambiar('euros')" class="form-control mb-3">
+    <h1>Dolares</h1>
+    <input type="number" value="{{dolares}}" [(ngModel)]="dolares" (ngModelChange)="cambiar('dolar')" class="form-control mb-3">
+    <h1>Yenes</h1>
+    <input type="number" value="{{yenes}}" [(ngModel)]="yenes" (ngModelChange)="cambiar('yenes')" class="form-control mb-3">
+  </div>
+</div>

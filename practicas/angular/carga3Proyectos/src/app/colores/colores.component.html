@@ -1,0 +1,51 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="col-6 text-center">
+    <div class="form-group">
+      <label for="color">Seleccione un color de letra</label>
+      <select
+        name="color"
+        id="color"
+        class="form-select"
+        [(ngModel)]="color"
+        (change)="cambiarColor()"
+      >
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+        <option value="amarillo">Amarillo</option>
+        <option value="rojo">Rojo</option>
+      </select>
+
+      <label for="size">Seleccione un tamaño de letra</label>
+      <select
+        name="size"
+        id="size"
+        class="form-select"
+        [(ngModel)]="size"
+        (ngModelChange)="cambiarSize()"
+      >
+        <option value="tam12">12 Pixeles</option>
+        <option value="tam16">16 Pixeles</option>
+        <option value="tam20">20 Pixeles</option>
+        <option value="tam24">24 Pixeles</option>
+      </select>
+
+      <label for="bgColor">Seleccione un color de letra</label>
+      <select
+        name="bgColor"
+        id="bgColor"
+        class="form-select"
+        [(ngModel)]="bgColor"
+        (ngModelChange)="cambiarBgColor()"
+      >
+        <option value="bgAzul">Azul</option>
+        <option value="bgVerde">Verde</option>
+        <option value="bgAmarillo">Amarillo</option>
+        <option value="bgRojo">Rojo</option>
+      </select>
+    </div>
+
+    <div id="textoPrueba" [ngClass]="[claseColor, claseSize, claseBgColor]">
+      Texto de prueba
+    </div>
+  </div>
+</div>

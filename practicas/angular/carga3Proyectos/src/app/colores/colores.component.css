@@ -1,0 +1,45 @@
+.azul{
+  color: blue;
+}
+.amarillo{
+  color: yellow;
+}
+.verde{
+  color: green;
+}
+.rojo{
+  color: red;
+}
+.tam12{
+  font-size: 12px;
+}
+.tam16{
+  font-size: 16px;
+}
+.tam20{
+  font-size: 20px;
+}
+.tam24{
+  font-size: 24px;
+}
+.bgAzul{
+  background-color: blue;
+}
+.bgAmarillo{
+  background-color: yellow;
+}
+.bgVerde{
+  background-color: green;
+}
+.bgRojo{
+  background-color: red;
+}
+
+#textoPrueba{
+  padding: 15px;
+  text-align: center;
+}
+
+.container{
+  margin-top: 20px;
+}
