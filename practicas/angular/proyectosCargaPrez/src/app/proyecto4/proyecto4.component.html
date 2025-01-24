@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+
+      <div class="text-center">
+        <h1>Angular4</h1>
+
+        <label for="num1">num1</label>
+        <input type="number" [(ngModel)]="num1" id="num1" class="form-control mb-3" />
+
+        <label for="num2">num2</label>
+        <input type="number" [(ngModel)]="num2" id="num2" class="form-control mb-3" />
+
+        <div class="d-flex justify-content-center mb-3">
+          <button class="btn btn-primary m-2" (click)="sumar()">sumar</button>
+          <button class="btn btn-primary m-2" (click)="restar()">restar</button>
+          <button class="btn btn-primary m-2" (click)="multiplicar()">multiplicar</button>
+          <button class="btn btn-primary m-2" (click)="dividir()">dividir</button>
+        </div>
+
+        <h2>Resultado: {{ resultado }}</h2>
+      </div>
+
+  </div>
+</div>
