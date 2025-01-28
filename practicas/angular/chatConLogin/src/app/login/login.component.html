@@ -1,0 +1,28 @@
+<div class="card"></div>
+  <form class="example-form" (ngSubmit)="logueo()" [formGroup]="form">
+<mat-form-field class="example-full-width">
+  <mat-label>Email</mat-label>
+  <input type="email" matInput formControlname="emailFormControl" placeholder="Ex. pat@example.com">
+  <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+    Introduce un email valido
+  </mat-error>
+  <mat-error *ngIf="emailFormControl.hasError('required')">
+    Email es <strong>requerido</strong>
+  </mat-error> -->
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <mat-label>Contraseña</mat-label>
+  <input type="password" matInput formControlname ="contrasenaFormControl">
+  <!-- <mat-error *ngIf="contrasenaFormControl.hasError('minlength')">
+    Introduce una contaseña con 3 caracteres o mas
+  </mat-error>
+  <mat-error *ngIf="contrasenaFormControl.hasError('required')">
+    Contraseña es <strong>requerido</strong>
+  </mat-error> -->
+</mat-form-field>
+<br>
+<div class="d-flex justify-content-center">
+  <button class="btn btn-primary" onclick="">Enviar</button>
+</div>
+</form>
