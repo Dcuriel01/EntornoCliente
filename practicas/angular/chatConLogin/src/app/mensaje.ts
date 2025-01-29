@@ -5,4 +5,5 @@ export class Mensaje {
   mensaje!:string;
   activo!:number;
   destinatario!:string;
+
 }
