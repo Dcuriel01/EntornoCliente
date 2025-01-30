@@ -1,0 +1,13 @@
+.example-form-field {
+  width: 100%;
+  display: block;
+}
+
+.example-form-field mat-label {
+  width: 100%;
+}
+
+.example-form-field input {
+  width: 100%;
+  box-sizing: border-box;
+}

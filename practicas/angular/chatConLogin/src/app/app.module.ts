@@ -18,6 +18,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,HttpClientModule,
     MatFormFieldModule, MatInputModule, MatTableModule,
-    MatSortModule, MatPaginatorModule
+    MatSortModule, MatPaginatorModule,MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

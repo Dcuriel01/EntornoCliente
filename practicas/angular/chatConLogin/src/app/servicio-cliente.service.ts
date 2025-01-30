@@ -30,9 +30,15 @@ escribirMensaje(mensaje:Mensaje):Observable<Mensaje>{
 
 logeo (usuario:Usuario):Observable<Usuario[]>{
   return this.http.get<Usuario[]>
-  ('http://moralo.atwebpages.com/menuAjax/chat/SeleccionarUsuario.php?email='+usuario.email+'&pwd='+usuario.pwd
-  )
+  ('http://moralo.atwebpages.com/menuAjax/chat/SeleccionarUsuario.php?email='+usuario.email+'&pwd='+usuario.pwd)
 }
-// http://moralo.atwebpages.com/menuAjax/chat/SeleccionarUsuario.php?email='+user.email+'&pwd='+user.pwd
-// }
+
+escribirMensajeP(mensaje:Mensaje):Observable<Mensaje>{
+  return this.http.post<Mensaje>('http://moralo.atwebpages.com/menuAjax/chat/AltaMensajeP.php',mensaje)
+}
+
+leerMensajesP(){
+  return this.http.get<Mensaje[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerMensajesP.php?usuario='+sessionStorage.getItem('Email'))
+}
+
 }

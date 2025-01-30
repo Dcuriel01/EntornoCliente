@@ -10,8 +10,15 @@ import { Usuario } from '../usuario';
 })
 export class RegistroComponent {
 usuario: Usuario=new Usuario();
-constructor(private servicio: ServicioClienteService,private route:Router)
-{}
+nUsuario !:string|null
+constructor(private route:Router,private servicio:ServicioClienteService){
+  if (sessionStorage.getItem('Email')==null) {
+    this.registrado = false
+  }else{
+    this.nUsuario=sessionStorage.getItem('Email')
+  }
+}
+registrado = true
 Registrar() {
 
   //llamar al servicio de añadirNuevoUsuario (usuario)

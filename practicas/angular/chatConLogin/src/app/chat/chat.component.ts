@@ -47,7 +47,7 @@ refrescar(){
   displayedColumns: string[]=['id','fecha','usuario','mensaje'];
 
   ngOnInit(): void {
-    this.nUsuario = sessionStorage.getItem('Nombre')
+    this.nUsuario = sessionStorage.getItem('Email')
     if (this.nUsuario==null) {
       this.dataSource= new MatTableDataSource<Mensaje>()
     }else{
@@ -61,7 +61,7 @@ refrescar(){
   }
 
   cerrarSesion() {
-    sessionStorage.removeItem('Nombre')
+    sessionStorage.removeItem('Email')
     this.nUsuario = 'Sesión cerrada'
     this.dataSource = new MatTableDataSource<Mensaje>()
     this.route.navigate(['login'])
