@@ -24,7 +24,8 @@ privado !: boolean
 usuario: Usuario=new Usuario();
 listaUsuarios:Usuario[]=[];
 Login() {
-  this.servicioCliente.logeo(this.usuario).subscribe((x)=>{
+  this.servicioCliente.logeo(this.usuario).subscribe(
+    (x) => {
     this.usuario=x[0];
     sessionStorage.setItem('Email',x[0].email);
     if (this.privado) {
@@ -32,7 +33,12 @@ Login() {
     }else{
       this.router.navigate(['chat']);
     }
-  })
+  },
+    (error) => {
+      alert('El usuario no existe o esta bloqueado');
+    }
+  )
+
 
 }
 

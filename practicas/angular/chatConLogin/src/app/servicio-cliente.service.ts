@@ -11,15 +11,12 @@ export class ServicioClienteService {
 
   constructor(private http: HttpClient) { }
 
-
-
-
 insertarUsuario(usuario:Usuario):Observable<Usuario>{
   return this.http.post<Usuario>('http://moralo.atwebpages.com/menuAjax/chat/AltaUsuario.php',usuario);
 }
 
 leerMensajes(){
-  return this.http.get<Mensaje[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerMensajes.php')
+  return this.http.get<Mensaje[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerMensajes2.php')
 }
 
 escribirMensaje(mensaje:Mensaje):Observable<Mensaje>{
