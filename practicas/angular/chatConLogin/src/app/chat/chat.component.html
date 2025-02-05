@@ -1,12 +1,17 @@
 
 <p *ngIf="!nUsuario">Usuario: sesión cerrada</p>
     <ng-container *ngIf="nUsuario">
+
     <p>Usuario: {{ nUsuario }} <button (click)="cerrarSesion()">Cerrar Sesión</button></p>
     <br>
 
     <mat-form-field class="example-form-field ">
       <mat-label>Escribe mensaje y pulsa enter</mat-label>
       <input matInput type="text" (keydown.enter)="enviarMensaje()" (keyup)="refrescar()" [(ngModel)]="mensaje.mensaje" >
+    </mat-form-field>
+    <mat-form-field class="example-form-field ">
+      <mat-label>Cambiar PWD</mat-label>
+      <input matInput type="text" (keydown.enter)="cambiarPWD()" (keyup)="refrescar()" [(ngModel)]="pwdNueva" >
     </mat-form-field>
     <mat-form-field class="example-form-field ">
       <mat-label>Filter</mat-label>

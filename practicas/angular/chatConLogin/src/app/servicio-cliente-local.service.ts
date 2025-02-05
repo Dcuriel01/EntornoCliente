@@ -7,24 +7,24 @@ import { Usuario } from './usuario';
 @Injectable({
   providedIn: 'root'
 })
-export class ServicioClienteService {
+export class ServicioClienteLocalService {
 
   constructor(private http: HttpClient) { }
 
 insertarUsuario(usuario:Usuario):Observable<Usuario>{
-  return this.http.post<Usuario>('http://moralo.atwebpages.com/menuAjax/chat/AltaUsuario.php',usuario);
+  return this.http.post<Usuario>('http://localhost/servicioServidor/serviciosChat/insertarUsuario.php',usuario);
 }
 
 leerMensajes(){
-  return this.http.get<Mensaje[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerMensajes2.php')
+  return this.http.get<Mensaje[]>('http://localhost/servicioServidor/serviciosChat/listadoMensajes.php')
 }
 
 escribirMensaje(mensaje:Mensaje):Observable<Mensaje>{
-  return this.http.post<Mensaje>('http://moralo.atwebpages.com/menuAjax/chat/AltaMensaje.php',mensaje)
+  return this.http.post<Mensaje>('http://localhost/servicioServidor/serviciosChat/insertarMensaje.php',mensaje)
 }
 
 logeo (usuario:Usuario):Observable<Usuario[]>{
-  return this.http.get<Usuario[]>('http://moralo.atwebpages.com/menuAjax/chat/SeleccionarUsuario.php?email='+usuario.email+'&pwd='+usuario.pwd)
+  return this.http.get<Usuario[]>('http://localhost/servicioServidor/serviciosChat/logeo.php?email='+usuario.email+'&pwd='+usuario.pwd)
 }
 
 escribirMensajeP(mensaje:Mensaje):Observable<Mensaje>{
@@ -40,7 +40,7 @@ cambiarPWD(usuario:Usuario):Observable<Usuario>{
 }
 
 obtenerUsuarios(){
-  return this.http.get<Usuario[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerUsuarios2.php');
+  return this.http.get<Usuario[]>('http://localhost/servicioServidor/serviciosChat/listadoUsuarios.php');
 }
 
 }

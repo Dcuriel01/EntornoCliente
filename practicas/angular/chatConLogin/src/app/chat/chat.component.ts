@@ -5,26 +5,44 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Mensaje } from '../mensaje';
 import { ServicioClienteService } from '../servicio-cliente.service';
+import { Usuario } from '../usuario';
+import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
 
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit{
-enviarMensaje() {
-  this.mensaje.usuario=this.nUsuario || ''
-  this.mensaje.fecha= new Date().toLocaleString()
-  this.servicio.escribirMensaje(this.mensaje).subscribe()
-}
-refrescar(){
-  this.servicio.leerMensajes().subscribe((resultado:Mensaje[])=>{
-    this.dataSource.data=resultado
-    this.dataSource.paginator = this.paginator
-    this.dataSource.sort=this.sort
-  })
-}
-  constructor(private servicio:ServicioClienteService,private route:Router){}
+export class ChatComponent implements OnInit {
+  pwdNueva!: string
+  usuario: Usuario = {
+    nombre: '',
+    email: '',
+    pwd: '',
+    activo: 1
+  }
+  cambiarPWD() {
+    this.usuario.email = this.nUsuario || ''
+    this.usuario.pwd = this.pwdNueva
+    this.servicio.cambiarPWD(this.usuario).subscribe()
+    alert('Contraseña cambiada')
+    this.cerrarSesion()
+  }
+
+  enviarMensaje() {
+    this.mensaje.usuario = this.nUsuario || ''
+    this.mensaje.fecha = new Date().toLocaleString()
+    this.servicio.escribirMensaje(this.mensaje).subscribe()
+    alert('Mensaje enviado')
+  }
+  refrescar() {
+    this.servicio.leerMensajes().subscribe((resultado: Mensaje[]) => {
+      this.dataSource.data = resultado
+      this.dataSource.paginator = this.paginator
+      this.dataSource.sort = this.sort
+    })
+  }
+  constructor(private servicio: ServicioClienteLocalService, private route: Router) { }
   dataSource = new MatTableDataSource<Mensaje>()
 
   applyFilter(event: Event) {
@@ -35,16 +53,16 @@ refrescar(){
       this.dataSource.paginator.firstPage();
     }
   }
-  nUsuario!:string|null
-  mensaje:Mensaje={
-    id:0,
-    fecha:'',
-    usuario:'',
-    mensaje:'',
-    destinatario:'todos',
-    activo:1
+  nUsuario!: string | null
+  mensaje: Mensaje = {
+    id: 0,
+    fecha: '',
+    usuario: '',
+    mensaje: '',
+    destinatario: 'todos',
+    activo: 1
   }
-  displayedColumns: string[]=['id','fecha','usuario','mensaje'];
+  displayedColumns: string[] = ['id', 'fecha', 'usuario', 'mensaje'];
 
   ngOnInit(): void {
     this.nUsuario = sessionStorage.getItem('Email')
@@ -69,7 +87,9 @@ refrescar(){
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  tabla!:MatTable<Mensaje>
+  tabla!: MatTable<Mensaje>
 
 
 }
+
+

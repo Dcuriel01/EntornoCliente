@@ -29,4 +29,5 @@ activarMensaje(mensaje:Mensaje):Observable<Mensaje>{
 bloquearMensaje(mensaje:Mensaje):Observable<Mensaje>{
   return this.http.post<Mensaje>('http://moralo.atwebpages.com/chat/BloquearMensaje.php',mensaje);
 }
+
 }

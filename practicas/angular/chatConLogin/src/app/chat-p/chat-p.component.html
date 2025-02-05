@@ -15,6 +15,12 @@
       <mat-label>Filter</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
     </mat-form-field>
+    <div class="example-form-field ">
+      <mat-label>usuarios</mat-label>
+      <select name="usuarios" id="usuarios" [(ngModel)]="mensaje.destinatario">
+        <option *ngFor="let usuario of usuarios">{{usuario.email}}</option>
+      </select>
+    </div>
 
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>

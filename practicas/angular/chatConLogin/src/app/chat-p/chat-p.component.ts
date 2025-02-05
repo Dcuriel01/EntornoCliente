@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Usuario } from '../usuario';
 
 @Component({
   selector: 'app-chat-p',
@@ -12,6 +13,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./chat-p.component.css']
 })
 export class ChatPComponent {
+  usuarios:Usuario[]=[]
   enviarMensaje() {
     this.mensaje.usuario=this.nUsuario || ''
     this.mensaje.fecha= new Date().toLocaleString()
@@ -57,6 +59,9 @@ export class ChatPComponent {
           this.dataSource.data=resultado
           this.dataSource.paginator = this.paginator
           this.dataSource.sort=this.sort
+        })
+        this.servicio.obtenerUsuarios().subscribe((x:Usuario[])=>{
+          this.usuarios=x
         })
       }
     }

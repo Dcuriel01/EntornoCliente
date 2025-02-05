@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioClienteService } from '../servicio-cliente.service';
 import { Usuario } from '../usuario';
+import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
 
 @Component({
   selector: 'app-registro',
@@ -11,7 +12,7 @@ import { Usuario } from '../usuario';
 export class RegistroComponent {
 usuario: Usuario=new Usuario();
 nUsuario !:string|null
-constructor(private route:Router,private servicio:ServicioClienteService){
+constructor(private route:Router,private servicio:ServicioClienteLocalService){
   if (sessionStorage.getItem('Email')==null) {
     this.registrado = false
   }else{

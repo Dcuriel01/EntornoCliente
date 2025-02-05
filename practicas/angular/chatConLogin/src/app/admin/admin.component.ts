@@ -56,7 +56,7 @@ export class AdminComponent {
       destinatario:'todos',
       activo:1
     }
-    displayedColumns: string[]=['id','fecha','usuario','mensaje','activo','acciones'];
+    displayedColumns: string[]=['id','fecha','usuario','mensaje','destinatario','activo','acciones'];
     displayedColumns2: string[]=['nombre','email','activo','pwd','acciones'];
     ngOnInit(): void {
       this.nUsuario = sessionStorage.getItem('Email')

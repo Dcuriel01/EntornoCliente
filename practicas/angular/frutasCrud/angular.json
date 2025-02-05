@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frutasCrud": {
+    "chatConLogin": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frutas-crud",
+            "outputPath": "dist/chat-con-login",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,10 +61,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frutasCrud:build:production"
+              "browserTarget": "chatConLogin:build:production"
             },
             "development": {
-              "browserTarget": "frutasCrud:build:development"
+              "browserTarget": "chatConLogin:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frutasCrud:build"
+            "browserTarget": "chatConLogin:build"
           }
         },
         "test": {
@@ -88,7 +89,7 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "fcf376ad-311d-4cbc-b0d3-0ec4b4fd56ef"
+    "analytics": "d7183c97-df76-4aaf-bc25-f7db25286c85"
   }
 }
