@@ -7,6 +7,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ServicioAdminService } from '../servicio-admin.service';
 import { Usuario } from '../usuario';
+import { ServicioAdminLocalService } from '../servicio-admin-local.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,8 @@ import { Usuario } from '../usuario';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
+  servicio !: any
+  online = sessionStorage.getItem('Estado')
   refrescar(){
     this.servicio.leerMensajes().subscribe((resultado:Mensaje[])=>{
       this.dataSource.data=resultado
@@ -26,7 +29,8 @@ export class AdminComponent {
       this.dataSource2.sort=this.sort2
     })
   }
-    constructor(private servicio:ServicioAdminService,private route:Router){}
+
+    constructor(private servicioLocal:ServicioAdminLocalService,private route:Router,private servicioOnline:ServicioAdminService){}
     dataSource = new MatTableDataSource<Mensaje>()
     dataSource2 = new MatTableDataSource<Usuario>()
 
@@ -59,12 +63,17 @@ export class AdminComponent {
     displayedColumns: string[]=['id','fecha','usuario','mensaje','destinatario','activo','acciones'];
     displayedColumns2: string[]=['nombre','email','activo','pwd','acciones'];
     ngOnInit(): void {
+      this.online=sessionStorage.getItem('Estado')
+      if (this.online=='online') {
+        this.servicio=this.servicioOnline
+      }else{
+        this.servicio=this.servicioLocal
+      }
       this.nUsuario = sessionStorage.getItem('Email')
       if (this.nUsuario==null) {
         this.dataSource= new MatTableDataSource<Mensaje>()
         this.dataSource2= new MatTableDataSource<Usuario>()
       }else{
-
         this.servicio.leerMensajes().subscribe((resultado:Mensaje[])=>{
           this.dataSource.data=resultado
           this.dataSource.paginator = this.paginator1
@@ -75,11 +84,13 @@ export class AdminComponent {
           this.dataSource2.paginator = this.paginator2
           this.dataSource2.sort=this.sort2
         })
+
       }
     }
 
     cerrarSesion() {
       sessionStorage.removeItem('Email')
+      sessionStorage.removeItem('Estado')
       this.nUsuario = 'Sesión cerrada'
       this.dataSource = new MatTableDataSource<Mensaje>()
       this.route.navigate(['login'])

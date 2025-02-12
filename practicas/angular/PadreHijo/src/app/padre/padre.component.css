@@ -1,0 +1,8 @@
+.padre{
+  background-color: antiquewhite;
+}
+.flex{
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}

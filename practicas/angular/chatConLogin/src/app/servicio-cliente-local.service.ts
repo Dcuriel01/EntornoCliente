@@ -12,35 +12,35 @@ export class ServicioClienteLocalService {
   constructor(private http: HttpClient) { }
 
 insertarUsuario(usuario:Usuario):Observable<Usuario>{
-  return this.http.post<Usuario>('http://localhost/servicioServidor/serviciosChat/insertarUsuario.php',usuario);
+  return this.http.post<Usuario>('http://localhost/servicioServidor/serviciosCliente/insertarUsuario.php',usuario);
 }
 
 leerMensajes(){
-  return this.http.get<Mensaje[]>('http://localhost/servicioServidor/serviciosChat/listadoMensajes.php')
+  return this.http.get<Mensaje[]>('http://localhost/servicioServidor/serviciosCliente/listadoMensajes.php')
 }
 
 escribirMensaje(mensaje:Mensaje):Observable<Mensaje>{
-  return this.http.post<Mensaje>('http://localhost/servicioServidor/serviciosChat/insertarMensaje.php',mensaje)
+  return this.http.post<Mensaje>('http://localhost/servicioServidor/serviciosCliente/insertarmensaje.php',mensaje)
 }
 
-logeo (usuario:Usuario):Observable<Usuario[]>{
-  return this.http.get<Usuario[]>('http://localhost/servicioServidor/serviciosChat/logeo.php?email='+usuario.email+'&pwd='+usuario.pwd)
+logeo (usuario:Usuario):Observable<Object>{
+  return this.http.post<Object>('http://localhost/servicioServidor/serviciosCliente/login.php',usuario)
 }
 
 escribirMensajeP(mensaje:Mensaje):Observable<Mensaje>{
-  return this.http.post<Mensaje>('http://moralo.atwebpages.com/menuAjax/chat/AltaMensajeP.php',mensaje)
+  return this.http.post<Mensaje>('http://localhost/servicioServidor/serviciosCliente/insertarmensajep.php',mensaje)
 }
 
 leerMensajesP(){
-  return this.http.get<Mensaje[]>('http://moralo.atwebpages.com/menuAjax/chat/ObtenerMensajesP.php?usuario='+sessionStorage.getItem('Email'))
+  return this.http.get<Mensaje[]>('http://localhost/servicioServidor/serviciosCliente/listadoMensajesP.php?usuario='+sessionStorage.getItem('Email'))
 }
 
 cambiarPWD(usuario:Usuario):Observable<Usuario>{
-  return this.http.post<Usuario>('http://moralo.atwebpages.com/menuAjax/chat/EditarUsuario.php',usuario);
+  return this.http.post<Usuario>('http://localhost/servicioServidor/serviciosCliente/editarPwd.php',usuario);
 }
 
 obtenerUsuarios(){
-  return this.http.get<Usuario[]>('http://localhost/servicioServidor/serviciosChat/listadoUsuarios.php');
+  return this.http.get<Usuario[]>('http://localhost/servicioServidor/serviciosCliente/listadoUsuarios.php');
 }
 
 }

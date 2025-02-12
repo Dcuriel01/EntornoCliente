@@ -6,6 +6,8 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Usuario } from '../usuario';
+import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
+import { ServicioAdminService } from '../servicio-admin.service';
 
 @Component({
   selector: 'app-chat-p',
@@ -13,6 +15,8 @@ import { Usuario } from '../usuario';
   styleUrls: ['./chat-p.component.css']
 })
 export class ChatPComponent {
+  servicio !: any
+  online = sessionStorage.getItem('Estado')
   usuarios:Usuario[]=[]
   enviarMensaje() {
     this.mensaje.usuario=this.nUsuario || ''
@@ -28,7 +32,7 @@ export class ChatPComponent {
       this.dataSource.sort=this.sort
     })
   }
-    constructor(private servicio:ServicioClienteService,private route:Router){}
+    constructor(private servicioLocal:ServicioClienteLocalService,private route:Router,private servicioOnline:ServicioClienteService){}
     dataSource = new MatTableDataSource<Mensaje>()
 
     applyFilter(event: Event) {
@@ -51,6 +55,12 @@ export class ChatPComponent {
     displayedColumns: string[]=['id','fecha','usuario','mensaje','destinatario'];
 
     ngOnInit(): void {
+      this.online=sessionStorage.getItem('Estado')
+      if (this.online=='online') {
+        this.servicio=this.servicioOnline
+      }else{
+        this.servicio=this.servicioLocal
+      }
       this.nUsuario = sessionStorage.getItem('Email')
       if (this.nUsuario==null) {
         this.dataSource= new MatTableDataSource<Mensaje>()
@@ -63,11 +73,13 @@ export class ChatPComponent {
         this.servicio.obtenerUsuarios().subscribe((x:Usuario[])=>{
           this.usuarios=x
         })
+
       }
     }
 
     cerrarSesion() {
       sessionStorage.removeItem('Email')
+      sessionStorage.removeItem('Estado')
       this.nUsuario = 'Sesión cerrada'
       this.dataSource = new MatTableDataSource<Mensaje>()
       this.route.navigate(['login'])

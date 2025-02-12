@@ -1,0 +1,7 @@
+<div class="hijo1">
+  <h3>Este el hijo 1</h3>
+  <p>Mensaje recibido del padre: {{mensajeRecibidoPadre}}</p>
+  <h4>Mensaje de hijo 1 para padre</h4>
+  <input type="text" [(ngModel)]="mensajeP" (keyup)="enviarMensaje()">
+  <button type="button" (click)="enviarRandom()">Mandar random a padre</button>
+</div>

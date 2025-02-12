@@ -14,6 +14,8 @@ import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
+  servicio !: any
+  online !:any
   pwdNueva!: string
   usuario: Usuario = {
     nombre: '',
@@ -42,7 +44,7 @@ export class ChatComponent implements OnInit {
       this.dataSource.sort = this.sort
     })
   }
-  constructor(private servicio: ServicioClienteLocalService, private route: Router) { }
+  constructor(private servicioLocal:ServicioClienteLocalService,private route:Router,private servicioOnline:ServicioClienteService){}
   dataSource = new MatTableDataSource<Mensaje>()
 
   applyFilter(event: Event) {
@@ -65,6 +67,13 @@ export class ChatComponent implements OnInit {
   displayedColumns: string[] = ['id', 'fecha', 'usuario', 'mensaje'];
 
   ngOnInit(): void {
+    this.online=sessionStorage.getItem('Estado')
+    if (this.online=='online') {
+      this.servicio=this.servicioOnline
+    }else{
+      this.servicio=this.servicioLocal
+    }
+    console.log(this.servicio)
     this.nUsuario = sessionStorage.getItem('Email')
     if (this.nUsuario==null) {
       this.dataSource= new MatTableDataSource<Mensaje>()
@@ -80,6 +89,7 @@ export class ChatComponent implements OnInit {
 
   cerrarSesion() {
     sessionStorage.removeItem('Email')
+    sessionStorage.removeItem('Estado')
     this.nUsuario = 'Sesión cerrada'
     this.dataSource = new MatTableDataSource<Mensaje>()
     this.route.navigate(['login'])

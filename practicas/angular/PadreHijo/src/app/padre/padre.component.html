@@ -1,0 +1,28 @@
+<div class="padre">
+<h2>Este es el padre</h2>
+<div class="flex">
+<div>
+<h4>Comunicacion hijo 1</h4>
+<input type="text" [(ngModel)]="mensajeParaHijo1">
+<h4>Mensaje recibido: {{mensajeH1Padre}}</h4>
+<h4>Numero random: {{nRandomH1}}</h4>
+</div>
+<div>
+<h4>Comunicacion hijo 2</h4>
+<input type="text" [(ngModel)]="mensajeParaHijo2">
+<h4>Mensaje recibido: {{mensajeH2Padre}}</h4>
+<button (click)="generarRandom()">Mandar random</button>
+</div>
+</div>
+<app-hijo1
+[mensajeRecibidoPadre]="mensajeParaHijo1"
+(mensajeH1Padre)="actualizarMensajeh1($event)"
+(mandarRandom)="actualizarNumeroH1($event)"
+></app-hijo1>
+<app-hijo2
+[mensajeRecibidoPadre]="mensajeParaHijo2"
+(mensajeH2Padre)="actualizarMensajeh2($event)"
+[nRandom]="nRandomMandar"
+></app-hijo2>
+
+</div>

@@ -1,5 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioClienteService } from '../servicio-cliente.service';
 import { Usuario } from '../usuario';
@@ -11,67 +11,73 @@ import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-nUsuario !:string|null
-constructor(private router:Router,private servicioCliente:ServicioClienteLocalService){
-  if (sessionStorage.getItem('Email')==null) {
-    this.registrado = false
-  }else{
-    this.nUsuario=sessionStorage.getItem('Email')
-  }
-}
-registrado = true
-privado !: boolean
-usuario:Usuario={
-  nombre:'',
-  email:'',
-  pwd:'',
-  activo:1
-}
-usuarioEncontrado:Usuario={
-  nombre:'',
-  email:'',
-  pwd:'',
-  activo:1
-}
-encontrado=false;
-listaUsuarios:Usuario[]=[];
-Login() {
-  this.servicioCliente.obtenerUsuarios().subscribe(x=>{
-    this.listaUsuarios=x;
-    this.listaUsuarios.forEach(user => {
-              if (user.email === this.usuario.email && user.pwd === this.usuario.pwd && user.activo === 1) {
-                 this.usuarioEncontrado = user;
-                 this.encontrado = true;
-                }
-   });
-   if (this.encontrado) {
-    sessionStorage.setItem('Email',this.usuario.email);
-    if (this.privado) {
-      this.router.navigate(['chatp']);
-    }else{
-      this.router.navigate(['chat']);
+export class LoginComponent implements OnInit {
+  servicio !: any
+  online = false
+  nUsuario !: string | null
+  constructor(private servicioLocal:ServicioClienteLocalService,private route:Router,private servicioOnline:ServicioClienteService){
+    if (sessionStorage.getItem('Email') == null) {
+      this.registrado = false
+    } else {
+      this.nUsuario = sessionStorage.getItem('Email')
     }
-  }else{
-    alert('El usuario no existe o esta bloqueado');
   }
-});
-  // this.servicioCliente.logeo(this.usuario).subscribe(
-  //   (x) => {
-  //   this.usuario=x[0];
-  //   sessionStorage.setItem('Email',x[0].email);
-  //   if (this.privado) {
-  //     this.router.navigate(['chatp']);
-  //   }else{
-  //     this.router.navigate(['chat']);
-  //   }
-  // },
-  //   (error) => {
-  //     alert('El usuario no existe o esta bloqueado');
-  //   }
-  // )
+  ngOnInit(): void {
+    if (sessionStorage.getItem('Estado')=='online') {
+      this.online=true
+    }
+    if (this.online) {
+      this.servicio=this.servicioOnline
+      sessionStorage.setItem('Estado', 'online');
+    }else{
+      this.servicio=this.servicioLocal
+      sessionStorage.setItem('Estado', 'local');
+    }
 
+  }
+  registrado = true
+  privado !: boolean
+  usuario: Usuario = {
+    nombre: '',
+    email: '',
+    pwd: '',
+    activo: 1
+  }
+  usuarioEncontrado: Usuario = {
+    nombre: '',
+    email: '',
+    pwd: '',
+    activo: 1
+  }
+  comprobarOnline(){
+    if (this.online) {
+      this.online=false
+    }else{
+      this.online=true
+    }
+    if (this.online) {
+      this.servicio=this.servicioOnline
+      sessionStorage.setItem('Estado', 'online');
+    }else{
+      this.servicio=this.servicioLocal
+      sessionStorage.setItem('Estado', 'local');
+    }
+    console.log(sessionStorage.getItem('Estado'))
+  }
+  encontrado = false;
+  listaUsuarios: Usuario[] = [];
+  Login() {
+    this.servicio.logeo(this.usuario).subscribe(
+      (x:Usuario) => {
+        sessionStorage.setItem('Email', this.usuario.email);
+        if (this.privado) {
+          this.route.navigate(['chatp']);
+        } else {
+          this.route.navigate(['chat']);
+        }
+      }
+    )
 
-}
+  }
 
 }

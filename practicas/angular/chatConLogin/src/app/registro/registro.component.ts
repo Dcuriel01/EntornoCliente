@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServicioClienteService } from '../servicio-cliente.service';
 import { Usuario } from '../usuario';
@@ -9,14 +9,39 @@ import { ServicioClienteLocalService } from '../servicio-cliente-local.service';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent {
+export class RegistroComponent implements OnInit{
 usuario: Usuario=new Usuario();
 nUsuario !:string|null
-constructor(private route:Router,private servicio:ServicioClienteLocalService){
+servicio !: any
+online = false
+ngOnInit(): void {
+  if (this.online) {
+    this.servicio=this.servicioOnline
+    sessionStorage.setItem('Estado', 'online');
+  }else{
+    this.servicio=this.servicioLocal
+    sessionStorage.setItem('Estado', 'local');
+  }
+}
+constructor(private servicioLocal:ServicioClienteLocalService,private route:Router,private servicioOnline:ServicioClienteService){
   if (sessionStorage.getItem('Email')==null) {
     this.registrado = false
   }else{
     this.nUsuario=sessionStorage.getItem('Email')
+  }
+}
+comprobarOnline(){
+  if (this.online) {
+    this.online=false
+  }else{
+    this.online=true
+  }
+  if (this.online) {
+    this.servicio=this.servicioOnline
+    sessionStorage.setItem('Estado', 'online');
+  }else{
+    this.servicio=this.servicioLocal
+    sessionStorage.setItem('Estado', 'local');
   }
 }
 registrado = true
