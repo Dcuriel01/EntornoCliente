@@ -1,0 +1,18 @@
+[
+    {
+        "pregunta": "¿Cuál es la capital de España?",
+        "respuesta": "Madrid"
+    },
+    {
+        "pregunta": "¿Quién pintó la Mona Lisa?",
+        "respuesta": "Leonardo da Vinci"
+    },
+    {
+        "pregunta": "¿Cuántos continentes hay en el mundo?",
+        "respuesta": "7"
+    },
+    {
+        "pregunta": "¿En qué año terminó la Segunda Guerra Mundial?",
+        "respuesta": "1945"
+    }
+]
