@@ -1,0 +1,9 @@
+<div class="d-flex">
+<input type="text" placeholder="Introduzca un nombre" [(ngModel)]="nombre" [value]="nombre">
+<button class="btn btn-primary" (click)="anadirNombre()">Añadir</button>
+</div>
+<div>
+  <ul *ngFor="let n of nombres">
+    <li>{{ n }}</li>
+  </ul>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      Crud con Números aleatorios
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 justify-center">
+      <button class="btn btn-primary" (click)="GenerarNRandom()">Generar número aleatorio</button>
+    </div>
+  </div>
+  <div class="row justify-center">
+    <div class="col-6 justify-center">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Numero</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" *ngFor="let n of numeros">
+          <tr>
+            <th scope="row">{{n.id}}</th>
+            <td>{{n.numero}}</td>
+            <td><button class="btn btn-warning" (click)="modificarN(n)">Modificar</button>
+              <button class="btn btn-danger" (click)="eliminarN(n)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
